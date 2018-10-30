@@ -2,7 +2,7 @@
   Tags which contain arbitary non-parsed content
   For example: <script> JavaScript should not be parsed
 */
-export const childlessTags = ['style', 'script', 'template']
+export const childlessTags = ['style', 'script']
 
 /*
   Tags which auto-close because they cannot be nested

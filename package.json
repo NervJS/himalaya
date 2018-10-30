@@ -1,5 +1,5 @@
 {
-  "name": "himalaya",
+  "name": "himalaya-wxml",
   "description": "HTML to JSON parser",
   "version": "1.1.0",
   "author": "Chris Andrejewski <christopher.andrejewski@gmail.com>",
@@ -48,6 +48,9 @@
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
+  "files": [
+    "lib"
+  ],
   "homepage": "https://github.com/andrejewski/himalaya",
   "keywords": [
     "ast",
@@ -71,12 +74,6 @@
       "text"
     ]
   },
-  "pre-commit": [
-    "prepublish"
-  ],
-  "pre-push": [
-    "prepublish"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/andrejewski/himalaya.git"
@@ -85,7 +82,6 @@
     "build": "gulp build",
     "coveralls": "npm run report && nyc report --reporter=text-lcov | coveralls",
     "himalaya": "./bin/himalaya.js",
-    "prepublish": "npm test && npm run build",
     "report": "NODE_ENV=nyc nyc npm test",
     "test": "fixpack && standard --fix && gulp --silent && ava",
     "test-ci": "npm run prepublish"
